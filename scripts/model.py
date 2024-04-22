@@ -26,7 +26,7 @@ class LLMForRAG:
 
         if not os.path.exists(model_path):
             raise FileNotFoundError(f"No model found on path {model_path}")
-        
+
         self.llm = Llama(
             model_path=model_path,
             n_gpu_layers=n_gpu_layers,

@@ -46,12 +46,14 @@ if __name__ == "__main__":
     ## SET UP MODEL
     print("Setting up model" + "." * 5)
 
-    n_gpu_layers = 20 # you will have to adapt this variable to your model and GPU, this works for 3050ti and saiga3-8b
-    n_threads = 8 # how many threads will be used for CPU processing, None for all threads
+    n_gpu_layers = 20  # you will have to adapt this variable to your model and GPU, this works for 3050ti and saiga3-8b
+    n_threads = (
+        8  # how many threads will be used for CPU processing, None for all threads
+    )
     n_batch = 256
-    n_ctx = 2048 # 2048 seems to be optimal as default, you may need to have to adapt this for bigger/lesser chunk size
-    max_tokens = 256 # max generated tokens
-    temperature = 0.5 # model temperature, less temperature -> less creative model
+    n_ctx = 2048  # 2048 seems to be optimal as default, you may need to have to adapt this for bigger/lesser chunk size
+    max_tokens = 256  # max generated tokens
+    temperature = 0.5  # model temperature, less temperature -> less creative model
     llama_verbose = False
 
     llm = LLMForRAG(

@@ -8,7 +8,6 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_community.vectorstores.utils import DistanceStrategy
 
-
 MONTH_MAP = {
     1: "января",
     2: "февраля",
@@ -104,7 +103,9 @@ if __name__ == "__main__":
     for date, texts in docs_by_dates.items():
         for text in texts:
             docs = text_splitter.split_text(text)
-            docs = [" ".join((russify_date(date), doc)) for doc in docs] # add date as prefix
+            docs = [
+                " ".join((russify_date(date), doc)) for doc in docs
+            ]  # add date as prefix
             full_docs.extend(docs)
 
     init_time = time.time()
