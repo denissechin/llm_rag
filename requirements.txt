@@ -1,0 +1,13 @@
+accelerate==0.29.2
+faiss-cpu==1.8.0
+langchain==0.1.15
+langchain-community==0.0.32
+langchain-core==0.1.41
+langchain-openai==0.1.2
+langchain-text-splitters==0.0.1
+langsmith==0.1.43
+llama_cpp_python==0.2.61
+openai==1.17.0
+pandas==2.1.4
+sentence-transformers==2.6.1
+transformers==4.39.3
